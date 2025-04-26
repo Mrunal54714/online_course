@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+.hero {
+    background-image: url('tech.jpeg'); /* Replace with your image URL */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn { 
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-enroll { /* Style for the "Enroll Now" button in the hero */
+    display: inline-block;
+    background-color: #28a745; /* Bootstrap success color */
+    color: white; /* Changed font color to white */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enroll:hover {
+    background-color: #96b8d8;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#co-ov {
+    text-align: center;
+}
+
+.progress-container {
+    padding: 20px;
+}
+
+.progress-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.enroll-form {
+    padding: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.btn-enroll { /* Style for the "Enroll Now" button in the hero */
+    background-color: #28a745; /* Bootstrap success color */
+    color: rgb(239, 242, 245);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#sub-btn {
+    text-align: center;
+    background-color:rgb(24, 9, 9);
+    border-color: white;
+}
+#enro{
+    color:white;
+    background-color:rgb(24, 9, 9);
+    border-color: white;
+}
+#enro:hover , #sub-btn:hover{
+    background-color:rgb(69, 223, 171);
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">LearnAI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Instructor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Enroll</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Master AI in 8 Weeks</h1>
+            <p>Learn Artificial Intelligence from the best in the Industry</p>
+            <a href="#" class="btn btn-enroll" id="enro">Enroll Now</a>
+        </div>
+    </header>
+
+    <section class="mt-5">
+        <h2 id="co-ov">Course Overview</h2>
+        <p>This course will guide you throught the foundation of AI, Maching Learning, and Deep Learning, With
+            real world projects and expert guidance, you'll be Industry ready within 8 weeks.
+        </p>
+    </section>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-6 progress-container">
+                <h4>Curriculum Progress</h4>
+                <div class="form-group">
+                    <label for="introduction" class="progress-label">Introduction to AI</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="machineLearning" class="progress-label">Machine Learning Basics</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="deepLearning" class="progress-label">Deep Learning & Projects</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="course.jpeg" alt="AI Image" class="img-fluid" width="800" height="400">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 id="co-ov"> Meet your Instructor </h2>
+        <div class="row align-items-center"> <div class="col-md-4">
+                <img src="instruct.jpeg" alt="" class="rounded-pill py-5" style="height: 320px">
+            </div>
+            <div class="col-md-8 d-flex align-items-center"> <div> <h6>Dr Jane Doe</h6>
+                    <p>With over 10 years of experience in Artifical Intelligence and Phd from MIT.Dr Jane has led teams at Google and OpenAI
+                        . She is passionate about teaching and making AI accessible to everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="co-ov">Enroll Now</h2>
+                <form class="enroll-form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="emailAddress">Email Address:</label>
+                            <input type="email" id="emailAddress" name="emailAddress" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="whyJoin">Why do you want to join?</label>
+                        <textarea id="whyJoin" name="whyJoin" rows="4" required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-dark" id="sub-btn">Submit Enrollment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
